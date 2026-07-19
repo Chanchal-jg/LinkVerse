@@ -1,16 +1,20 @@
 "use client"
-import { React, useState } from 'react'
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import { useSearchParams } from 'next/navigation';
 import { useRouter } from "next/navigation";
 
 const Generate = () => {
     const router = useRouter();
-    const searchParams = useSearchParams()
+    
     const [links, setLinks] = useState([{ link: "", linktext: "" }])
-    const [handle, sethandle] = useState(searchParams.get("handle"))
+    const [handle, sethandle] = useState("");
     const [pic, setpic] = useState("")
     const [desc, setdesc] = useState("")
+
+    useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    sethandle(params.get("handle") || "");
+}, []);
 
     const addLink = () => {
         setLinks(links.concat({ link: "", linktext: "" }))
