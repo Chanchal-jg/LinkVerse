@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main>
       <section className="bg-[#d2e823] min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
-        <div className="text-[#254f1a] p-10 flex flex-col justify-center items-center gap-5">
+        <div className="text-[#254f1a] px-10 py-25 md:p-10 flex flex-col justify-center items-center gap-5">
           <div className="flex flex-col gap-6">
             <h1 className="text-8xl font-bold">A link in bio built for you.</h1>
             <p className="font-medium">Join 70M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, Facebook, Twitter, YouTube and other social media profiles.</p>
